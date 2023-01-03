@@ -26,3 +26,6 @@ This can also be done with rows and collumns, reducing the number of possible va
 
 I implemented this so that the other possible values were removed when a naked pairs was identified and then when the possible values were set the naked pairs were identified and other possible valeus were removed and this process was repeated everytime a new value was set. 
 
+#### References 
+
+Sudoku - Naked Pairs n.d., www.learn-sudoku.com, viewed 3 January 2023, <https://www.learn-sudoku.com/naked-pairs.html>.
