@@ -23,3 +23,6 @@ In the image you can see that two squares just have "2" and "3" as possible valu
 ![Alt text](https://www.learn-sudoku.com/images/naked_pair2.gif)
 
 This can also be done with rows and collumns, reducing the number of possible values and therefore reducing the time taken. 
+
+I implemented this so that the other possible values were removed when a naked pairs was identified and then when the possible values were set the naked pairs were identified and other possible valeus were removed and this process was repeated everytime a new value was set. 
+
