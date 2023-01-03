@@ -383,10 +383,7 @@ def check_validity(sudoku):
     return True
 
 def pick_next_square(sudoku):
-    """
-    Used in depth first search, currently chooses a random 
-    square that has more than one possible value
-    """
+
     dictionary = sudoku.get_possible()
     length = 10
     short_key = ()
@@ -395,7 +392,7 @@ def pick_next_square(sudoku):
             length = len(dictionary[key])
             short_key = key
     return([short_key[0],short_key[1]])
-#     return random.choice(sudoku.empty_cells)
+
 
 
 def order_values(sudoku, cell):
@@ -409,18 +406,12 @@ def order_values(sudoku, cell):
                     if item == value:
                         count += 1
         value_dict[value] = count
-    # print(value_dict)
     lst = []
     value_dict = dict(sorted(value_dict.items(), key=lambda item: item[1]))
     for key in value_dict:
         lst.append(key)
     
     return lst
-
-    """
-    Get values for a particular column in the 
-    order we should try them in. Currently random.
-    """
 
 
 def depth_first_search(sudoku_board):
@@ -441,34 +432,12 @@ def depth_first_search(sudoku_board):
 
 def sudoku_solver(sudoku):
     UnsolvedSudoku = unsolved_sudoku(sudoku)
-    # UnsolvedSudoku.get_possible_values_for_square
-    # UnsolvedSudoku.get_three_by_three_possible_values(1)
     solved_sudoku = depth_first_search(UnsolvedSudoku)
     return(np.array(solved_sudoku.get_final_state()))
 
 
 sudokus = np.load(f"/Users/simranbarve/Documents/UNI/Y1/AI/sudoku/data/hard_puzzle.npy")
 solutions = np.load(f"/Users/simranbarve/Documents/UNI/Y1/AI/sudoku/data/hard_solution.npy")
-
-# for i in range(len(sudokus)):
-#         sudoku = sudokus[i].copy()
-#         print(f"This is hard sudoku number", i)
-#         print(sudoku)
-        
-#         solution = solutions[i].copy()
-#         print(solution)
-# print(solutions[1].copy())
-# sudoku = sudokus[2].copy()
-# sudoku_solver(sudoku)
-
-# start_time = time.process_time()
-# your_solution = sudoku_solver(sudoku)
-# end_time = time.process_time()
-
-# print(your_solution)
-# print("This sudoku took", end_time-start_time, "seconds to solve.\n")
-# # print(sudoku)
-
 
 
 SKIP_TESTS = False
