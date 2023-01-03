@@ -17,3 +17,9 @@ When this had been implemented the algorithm solved the hard sudokus between 20 
 Naked Pairs refers to when two squares in a row, collumn or block have the exact same two numbers as possible values 
 
 ![Alt text](https://www.learn-sudoku.com/images/naked_pair1.gif)
+
+In the image you can see that two squares just have "2" and "3" as possible values, they are nake pairs. This means that two and three have to go in either of those square so they aren't possible values for any otehr square in that block so it can be removed from the other squares' possible values. 
+
+![Alt text](https://www.learn-sudoku.com/images/naked_pair2.gif)
+
+This can also be done with rows and collumns, reducing the number of possible values and therefore reducing the time taken. 
