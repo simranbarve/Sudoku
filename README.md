@@ -15,4 +15,5 @@ When this had been implemented the algorithm solved the hard sudokus between 20 
 #### Naked Pairs
 
 Naked Pairs refers to when two squares in a row, collumn or block have the exact same two numbers as possible values 
+
 ![Alt text](https://www.learn-sudoku.com/images/naked_pair1.gif)
